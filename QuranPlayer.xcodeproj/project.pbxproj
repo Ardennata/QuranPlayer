@@ -6,20 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		0B84E5622FC9A0500039DC62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B84E5202FC996C90039DC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B84E5272FC996C90039DC62;
+			remoteInfo = QuranPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0B84E5282FC996C90039DC62 /* QuranPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuranPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B84E55E2FC9A0500039DC62 /* QuranPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuranPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0B84E5682FC9A0710039DC62 /* Exceptions for "QuranPlayer" folder in "QuranPlayer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				Test/QuranPlayerTests.swift,
+			);
+			target = 0B84E5272FC996C90039DC62 /* QuranPlayer */;
+		};
+		0B84E5692FC9A0710039DC62 /* Exceptions for "QuranPlayer" folder in "QuranPlayerTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Test/QuranPlayerTests.swift,
+			);
+			target = 0B84E55D2FC9A0500039DC62 /* QuranPlayerTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0B84E52A2FC996C90039DC62 /* QuranPlayer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0B84E5682FC9A0710039DC62 /* Exceptions for "QuranPlayer" folder in "QuranPlayer" target */,
+				0B84E5692FC9A0710039DC62 /* Exceptions for "QuranPlayer" folder in "QuranPlayerTests" target */,
+			);
 			path = QuranPlayer;
+			sourceTree = "<group>";
+		};
+		0B84E55F2FC9A0500039DC62 /* QuranPlayerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = QuranPlayerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0B84E5252FC996C90039DC62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B84E55B2FC9A0500039DC62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0B84E52A2FC996C90039DC62 /* QuranPlayer */,
+				0B84E55F2FC9A0500039DC62 /* QuranPlayerTests */,
 				0B84E5292FC996C90039DC62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				0B84E5282FC996C90039DC62 /* QuranPlayer.app */,
+				0B84E55E2FC9A0500039DC62 /* QuranPlayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +117,29 @@
 			productReference = 0B84E5282FC996C90039DC62 /* QuranPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0B84E55D2FC9A0500039DC62 /* QuranPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B84E5642FC9A0500039DC62 /* Build configuration list for PBXNativeTarget "QuranPlayerTests" */;
+			buildPhases = (
+				0B84E55A2FC9A0500039DC62 /* Sources */,
+				0B84E55B2FC9A0500039DC62 /* Frameworks */,
+				0B84E55C2FC9A0500039DC62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B84E5632FC9A0500039DC62 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0B84E55F2FC9A0500039DC62 /* QuranPlayerTests */,
+			);
+			name = QuranPlayerTests;
+			packageProductDependencies = (
+			);
+			productName = QuranPlayerTests;
+			productReference = 0B84E55E2FC9A0500039DC62 /* QuranPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +152,10 @@
 				TargetAttributes = {
 					0B84E5272FC996C90039DC62 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					0B84E55D2FC9A0500039DC62 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 0B84E5272FC996C90039DC62;
 					};
 				};
 			};
@@ -100,12 +174,20 @@
 			projectRoot = "";
 			targets = (
 				0B84E5272FC996C90039DC62 /* QuranPlayer */,
+				0B84E55D2FC9A0500039DC62 /* QuranPlayerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0B84E5262FC996C90039DC62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B84E55C2FC9A0500039DC62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +204,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B84E55A2FC9A0500039DC62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B84E5632FC9A0500039DC62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B84E5272FC996C90039DC62 /* QuranPlayer */;
+			targetProxy = 0B84E5622FC9A0500039DC62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0B84E5312FC996CC0039DC62 /* Debug */ = {
@@ -256,6 +353,7 @@
 				DEVELOPMENT_TEAM = FG42F9D52C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuranPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +382,7 @@
 				DEVELOPMENT_TEAM = FG42F9D52C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuranPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +398,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0B84E5652FC9A0500039DC62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FG42F9D52C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ardennatawinarno.QuranPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuranPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuranPlayer";
+			};
+			name = Debug;
+		};
+		0B84E5662FC9A0500039DC62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FG42F9D52C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ardennatawinarno.QuranPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuranPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuranPlayer";
 			};
 			name = Release;
 		};
@@ -319,6 +454,15 @@
 			buildConfigurations = (
 				0B84E5342FC996CC0039DC62 /* Debug */,
 				0B84E5352FC996CC0039DC62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B84E5642FC9A0500039DC62 /* Build configuration list for PBXNativeTarget "QuranPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B84E5652FC9A0500039DC62 /* Debug */,
+				0B84E5662FC9A0500039DC62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
