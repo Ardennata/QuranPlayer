@@ -1,4 +1,4 @@
-# 🕌 QuranPlayer
+# QuranPlayer
 
 A native iOS music player application built in SwiftUI that streams Quran recitations **per ayah (verse)** using the [Al-Quran Cloud API](https://alquran.cloud). Recited by **Mishary Rashid Alafasy**.
 
@@ -109,67 +109,6 @@ open QuranPlayer.xcodeproj
 Then press **Run** (`Cmd+R`) in Xcode.
 
 No external dependencies or package manager setup required — the project uses only Apple frameworks.
-
----
-
-## 📂 Project Structure Details
-
-```
-QuranPlayer/
-│
-├── QuranPlayerApp.swift          # @main entry point
-│
-├── Models/
-│   └── QuranModel.swift
-│       ├── Surah                 # API model: 114 chapters
-│       ├── AyahAudio             # API model: single verse with audio URL
-│       ├── SurahAudioData        # API wrapper for /surah/{n}/ar.alafasy data field
-│       ├── Track                 # Player domain model (init from AyahAudio + Surah)
-│       └── PlaybackState         # Enum for audio state machine
-│
-├── Services/
-│   ├── QuranAPIService.swift
-│   │   ├── QuranAPIError         # Typed errors (invalidURL, network, decoding, server)
-│   │   ├── QuranAPIServiceProtocol
-│   │   ├── QuranAPIService       # Live implementation using URLSession
-│   │   └── MockQuranAPIService   # Test double
-│   │
-│   └── AudioPlayerService.swift
-│       ├── AudioPlayerServiceProtocol
-│       ├── AudioPlayerService    # AVPlayer wrapper with Combine publishers
-│       └── MockAudioPlayerService
-│
-├── ViewModel/
-│   └── PlayerViewModel.swift     # @MainActor ObservableObject — all app state
-│
-├── Views/
-│   ├── ContentView.swift         # Root: splash overlay + LibraryView + MiniPlayer + .sheet
-│   ├── LibraryView.swift
-│   │   ├── LibraryView           # NavigationView with surah list
-│   │   ├── SurahRowView          # Single surah row with equalizer animation
-│   │   ├── AyahListView          # List of ayahs for a surah (pushed via NavigationLink)
-│   │   ├── AyahRowView           # Single ayah row with Arabic text
-│   │   ├── SearchBarView         # Styled search input
-│   │   └── EqualizerBarsView     # Animated bars for active surah
-│   ├── MiniPlayerView.swift
-│   │   ├── MiniPlayerView        # Bottom persistent bar
-│   │   └── MiniEqualizerView     # Small animated equalizer
-│   └── FullPlayerView.swift
-│       ├── FullPlayerView        # Full modal player sheet
-│       ├── SeekSliderView        # Custom drag-gesture seek bar
-│       ├── ArabesqueOrnamentView # Rotating decorative SVG-like ornament
-│       ├── ArabeskPetal          # Shape primitive for arabesque
-│       └── ScaleButtonStyle      # Press-to-scale button animation
-│
-├── Extensions/
-│   └── Extensions.swift
-│       ├── Color(hex:)           # Hex string to SwiftUI Color
-│       ├── View.placeholder      # ZStack-based placeholder overlay
-│       └── Double.clamped(to:)   # Range-clamping utility
-│
-└── Tests/
-    └── QuranPlayerTests.swift
-```
 
 ---
 
